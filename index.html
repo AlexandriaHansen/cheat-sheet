@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML/CSS Cheatsheet</title>
+    <meta name="description" content="Quick reference for some HTML/CSS basics">
+    <meta name="author" content="Alexandria Hansen">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>HTML/CSS Cheatsheet</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Tables</h2>
+            <div>
+                <h3>Table Tags</h3>
+                <table>
+                    <thead>
+                        <td>Tag</td>
+                        <td>Name</td>
+                        <td>Description</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><pre><code>&lttable&gt</code></pre></td>
+                            <td>Table</td>
+                            <td>Wrapper element for HTML tables</td>
+                        </tr>
+                        <tr>
+                            <td><pre><code>&ltthead&gt</code></pre></td>
+                            <td>Table Head</td>
+                            <td>Defines the row(s) containing column headers</td>
+                        </tr>
+                        <tr>
+                            <td><pre><code>&lttbody&gt</code></pre></td>
+                            <td>Table Body</td>
+                            <td>Defines the row(s) containing actual table data</td>
+                        </tr>
+                        <tr>
+                            <td><pre><code>&lttr&gt</code></pre></td>
+                            <td>Table Row</td>
+                            <td>Container for an individual row</td>
+                        </tr>
+                        <tr>
+                            <td><pre><code>&lttd&gt</code></pre></td>
+                            <td>Table Data</td>
+                            <td>Container for an individual cell</td>
+                        </tr>
+                        <tr>
+                            <td><pre><code>&lttfoot&gt</code></pre></td>
+                            <td>Table Foot</td>
+                            <td>Defines the row(s) containing the footer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Table Attributes</h3>
+                <table>
+                    <thead>
+                        <td>Attribute</td>
+                        <td>Name</td>
+                        <td>Description</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><pre><code>colspan</code></pre></td>
+                            <td>Column Span</td>
+                            <td>Defines how many columns a td element should span</td>
+                        </tr>
+                        <tr>
+                            <td><pre><code>rowspan</code></pre></td>
+                            <td>Row Span</td>
+                            <td>Defines how many rows a td element should span</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <h2>Forms</h2>
+            <h3>Form Tags</h3>
+            <table>
+                <thead>
+                    <td>Tag</td>
+                    <td>Name</td>
+                    <td>Description</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><pre><code>&ltform&gt</code></pre></td>
+                        <td>Form</td>
+                        <td>Wrapper element for HTML forms</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&ltinput&gt</code></pre></td>
+                        <td>Input</td>
+                        <td>Creates an input field. Used with the <pre><code>type</code></pre>
+                        attribute, which determines how the field renders and what kind of data it accepts.
+                        Must use <pre><code>id</code></pre> attribute to associate a <pre><code>&ltlabel&gt</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&ltlabel&gt</code></pre></td>
+                        <td>Label</td>
+                        <td>Used to label an <pre><code>&ltinput&gt</code></pre>. Uses the <pre><code>for</code></pre> 
+                            attribute w/ value of <pre><code>&ltinput&gt</code></pre>'s <pre><code>id</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&ltselect&gt</code></pre></td>
+                        <td>Select</td>
+                        <td>Creates a dropdown list. Dropdown choices are added with <pre><code>&ltoption&gt</code></pre>
+                            . By default only one can be selected.</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&ltoption&gt</code></pre></td>
+                        <td>Option</td>
+                        <td>Creates choices in a <pre><code>&ltselect&gt</code></pre> element, each with a 
+                            <pre><code>value</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&ltdatalist&gt</code></pre></td>
+                        <td>Datalist</td>
+                        <td>Used with an <pre><code>&ltinput type = "text"&gt</code></pre> element. Creates a field where
+                            you can type and filter options from the <pre><code>&ltdatalist&gt</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&lttextarea&gt</code></pre></td>
+                        <td>Text Area</td>
+                        <td>Creates a large text field. Add <pre><code>rows</code></pre> and <pre><code>cols</code></pre>
+                            attributes to set the number of rows and columns. Can be pre-filled by adding text between 
+                            opening & closing tags</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Form Attributes</h3>
+            <table>
+                <thead>
+                    <td>Attribute</td>
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Values</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><pre><code>action</code></pre></td>
+                        <td>Action</td>
+                        <td>Determines where information is sent. Declared on opening <pre><code>&ltform&gt</code></pre> tag.</td>
+                        <td>A file path; ie <pre><code>action = "./example.html"</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>method</code></pre></td>
+                        <td>Method</td>
+                        <td>Assigns an HTTP verb that is included in the HTTP request. Declared on opening <pre><code>&ltform&gt</code></pre> tag.</td>
+                        <td>ie <pre><code>method = "POST"</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>type</code></pre></td>
+                        <td>Type</td>
+                        <td>Specifies a type of input field. Declared on opening <pre><code>&ltinput&gt</code></pre> tag.</td>
+                        <td><pre><code>text</code></pre>: renders a text field you can type into <hr> 
+                            <pre><code>password</code></pre>: replaces input text w/ another character ( * or &bullet;) <hr>
+                            <pre><code>number</code></pre>: restricts users to input only numbers and a few special characters like - + . <hr>
+                            <pre><code>range</code></pre>: creates a slider to put limits on the numeric values being input, using <pre><code>min</code></pre> & 
+                                <pre><code>max</code></pre> attributes <hr>
+                            <pre><code>checkbox</code></pre>: creates a checkbox. The value of the <pre><code>value</code></pre> attribute is not visible, so a <pre><code>&ltlabel&gt</code></pre>
+                                is necessary. Using the same <pre><code>name</code></pre> for a series of checkboxes will group them together, but each should have a unique 
+                                <pre><code>id</code></pre> to pair with a <pre><code>&ltlabel&gt</code></pre><hr>
+                            <pre><code>radio</code></pre>: presents multiple options but only allows for one selection. Does not display its <pre><code>value</code></pre> 
+                                (like checkboxes) so <pre><code>&ltlabel&gt</code></pre>s are necessary. Assign <pre><code>radio</code></pre> <pre><code>&ltinput&gt</code></pre>s 
+                                the same <pre><code>name</code></pre> so only one from that group can be selected.<hr>
+                            <pre><code>submit</code></pre>: creates a submit button. The value of <pre><code>value</code></pre> is displayed on the button. If no value is assigned, 
+                                it will display "submit" by default</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>step</code></pre></td>
+                        <td>Step</td>
+                        <td>Creates arrows inside an input field that increase or decrease the input by the given value of the step. <br>
+                            Adding a <pre><code>step</code></pre> attribute to an <pre><code>&ltinput type = "range"&gt</code></pre> with small values will make
+                            the slider glide more smoothly.</td>
+                        <td>A numeric value</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>value</code></pre></td>
+                        <td>Value</td>
+                        <td>Becomes what is typed into the text field. </td>
+                        <td>A string</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>name</code></pre></td>
+                        <td>Name</td>
+                        <td>Add so the information in the <pre><code>&ltinput&gt</code></pre> is sent when the form is submitted</td>
+                        <td>A string</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>placeholder</code></pre></td>
+                        <td>Placeholder</td>
+                        <td>Added to <pre><code>&ltinput&gt</code></pre> to make those ghosty placeholder words that disappear when you start typing or make a selection.</td>
+                        <td>A string</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>CSS Specificity</h2>
+            <h3 class="specificity">UNIVERSAL (<pre><code>*</code></pre>) &lt ELEMENT (<pre><code>html</code></pre>) &lt CLASS
+                (<pre><code>.</code></pre>) &lt ID (<pre><code>#</code></pre>)</h3>
+        </div>
+        <div>
+            <h2>Common CSS Properties</h2>
+            <table>
+                <thead>
+                    <td>Property</td>
+                    <td>Description</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><pre><code>font-family</code></pre></td>
+                        <td>Changes the font/typeface</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>font-size</code></pre></td>
+                        <td>Changes the size of the font/typeface. Set in pixels, em, rem, percentages, or 
+                            relative/absolute keywords (ie medium/smaller)</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>font-weight</code></pre></td>
+                        <td>Controls how bold or thin text appears. Set in relative keywords (bolder, normal) or a 
+                            number between 1 and 1000</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>text-align</code></pre></td>
+                        <td>Controls where text element appears on the page. Default is left</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>color</code></pre></td>
+                        <td>Changes the font color. Can be set in hex, rbg, hsl, or named colors.</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>background-color</code></pre></td>
+                        <td>Changes the background color of an element</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>background-img</code></pre></td>
+                        <td>Changes the background to an image provided with <pre><code>url("example")</code></pre>. 
+                            Can be a relative file path or a link to an external file</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>opacity</code></pre></td>
+                        <td>Changes the opacity of an element. Set to a number between 0.1 and 0.99 or a percentage</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>list-style</code></pre></td>
+                        <td>Can change the style of a bulleted/unordered list (ie from round to square bullets with the 
+                            value <pre><code>square</code></pre>)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

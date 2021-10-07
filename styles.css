@@ -1,0 +1,44 @@
+* {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+h2 {
+    font-size: 2em;
+    text-align: center;
+    background-color: peachpuff;
+}
+h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+pre {
+    display: inline-block;
+    background-color: lightgray;
+    padding: .25em;
+    margin: .25em 0;
+}
+code {
+    font-family: monospace;
+}
+
+table {
+    border: 1px solid palevioletred;
+    margin: auto;
+}
+thead {
+    background-color: pink;
+}
+td {
+    padding-left: .5em;
+    padding-right: .5em;
+    border-top: 1px solid palevioletred;
+}
+
+.specificity {
+    word-spacing: .5em;
+}
